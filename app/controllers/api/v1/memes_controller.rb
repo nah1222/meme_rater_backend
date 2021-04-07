@@ -50,6 +50,7 @@ module Api
         params.require(:meme).permit(:name, :image_url)
       end
 
+      #for methods with existing objs
       def options
         @options ||= {include: %i[reviews]}
       end
