@@ -5,13 +5,13 @@ module Api
       def index
         memes = Meme.all
 
-        render json: MemeSerializer.new(memes, options).serialized.json
+        render json: MemeSerializer.new(memes, options).serialized_json
       end
       
       def show
         meme = Meme.find_by(slug: params[:slug])
 
-        render json: MemeSerializer.new(meme, options).serialized.json
+        render json: MemeSerializer.new(meme, options).serialized_json
       end
       
       def create
